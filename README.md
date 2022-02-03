@@ -1,7 +1,5 @@
 # readme
 
-[TOC]
-
 ## 概览
 
 ### 任务描述
@@ -48,7 +46,7 @@
 7. `echartsAction.ipynb`: 使用`pyechatrs`库绘制行情回放；
 8. `get_data.ipynb`: 数据获取接口
 
-<img src="C:\Users\Yip\AppData\Roaming\Typora\typora-user-images\image-20220204002953656.png" alt="image-20220204002953656" style="zoom:50%;" />
+![image](https://user-images.githubusercontent.com/67161381/152392053-adcff8a2-48d5-465d-8116-8d22619e3c3b.png)
 
 `demo`中存放有内容展示的PPT文稿、展示如何使用接口和绘图的`mp4`文件、可以进行交互的`html`文件。
 
@@ -108,7 +106,7 @@ reader = dd.read_csv(
 reader
 ```
 
-<img src="C:\Users\Yip\AppData\Roaming\Typora\typora-user-images\image-20220202183140880.png" alt="image-20220202183140880" style="zoom:50%;" />
+![image](https://user-images.githubusercontent.com/67161381/152392132-aac63ec4-336f-43da-9b5a-541c545b47f9.png)
 
 当前文件被分隔成63个可并行运算的任务，大大加快了文件读取和切片的效率。此后，程序可根据所需的股票数据从源数据中直接进行提取，由于使用了`dask.delayed`惰性调用方法，且通过并行计算加快运行速度，该调用方法的效率较高，将数据处理与可视化步骤合为一体，避免对所有数据进行预处理部分较长的初始化时间。但由于未经预处理，在每次调用时需要对源数据进行切片获取，因此在单个数据调用部分效率略低于上一方法。
 
@@ -183,7 +181,7 @@ def volume_adjust(self):
 5. 可以显示成交量数据
 6. 可以自定义指标显示（MACD, KDJ等）
 
-![image-20220203222432265](C:\Users\Yip\AppData\Roaming\Typora\typora-user-images\image-20220203222432265.png)
+![image](https://user-images.githubusercontent.com/67161381/152392185-76a05ee6-81f9-4c1b-b578-a1fbc719d054.png)
 
 #### `Echarts`功能概览
 
@@ -197,7 +195,7 @@ def volume_adjust(self):
 8. 通过`timeline`功能实现动态数据回放
 9. 可导出成`html`类型文件在浏览器查看K线图或动态回放
 
-![image-20220203171817443](C:\Users\Yip\AppData\Roaming\Typora\typora-user-images\image-20220203171817443.png)
+![image](https://user-images.githubusercontent.com/67161381/152392224-dddc5527-e874-4948-a34b-1ede4fe80ad2.png)
 
 #### 小结
 
@@ -220,8 +218,8 @@ def volume_adjust(self):
 5. 行情回放系统可以暂停
 6. 通过滑动可以加快回放速度；回放速度可自定义
 7. 通过鼠标滑轮可以放大细节呈现
-
-![image-20220203230323555](C:\Users\Yip\AppData\Roaming\Typora\typora-user-images\image-20220203230323555.png)
+8. 
+![image](https://user-images.githubusercontent.com/67161381/152392265-bedbdff5-f026-4db5-b2fc-dd8d2e07b79a.png)
 
 ## 数据接口
 
